@@ -1,0 +1,29 @@
+nav {
+    background-color: beige;
+    margin-bottom: 2em;
+ }
+ 
+ nav ul li {
+   display: inline-block;
+   width: 25%;
+ }
+ 
+ nav ul li a {
+    color: deeppink;
+    text-decoration: none;
+    padding: 0.2em 0.4em;
+    display: block;
+    text-align: center;
+ }
+ 
+ nav ul li a:hover {
+    background-color: deeppink;
+    color: beige;
+ }
+ 
+ 
+ nav ul li a.activo {
+    background-color: deeppink;
+    color: beige;
+ }
+ 
