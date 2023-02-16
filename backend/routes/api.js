@@ -15,12 +15,12 @@ router.get('/novedades', async function (req, res, next){
         crop: 'fill'
     });
     return{
-        ...novedad,
+        ...novedadades,
         imagen
     }
 } else{
     return {
-        ...novedad,
+        ...novedades,
         imagen: ''
     }
 }
