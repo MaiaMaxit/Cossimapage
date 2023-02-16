@@ -1,5 +1,7 @@
 
-/*import './App.css';*/
+import './App.css';
+import './styles/normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -8,7 +10,7 @@ import Nav from "./componentes/layout/Nav";
 import Footer from "./componentes/layout/Footer";
 
 import Contacto from './pages/Contacto';
-import Home from './pages/Home';
+import {Home} from './pages/Home';
 import Nosotros from './pages/Nosotros';
 import Servicios from './pages/Servicios';
 

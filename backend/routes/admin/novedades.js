@@ -1,7 +1,9 @@
 var express = require('express');
+const { route } = require('..');
 var router = express.Router();
 var novedadesModel = require('-/../../models/novededesModel');
 var util = require('util');
+const { isReadable } = require ('stream');
 var cloudinary = require('cloudinary').v2;
 const uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
@@ -50,7 +52,7 @@ router.post('/agregar', async (req, res, next) => {
             img_id (await uploader(imagen.tempFilePath)).public_id;
         }
 
-        if (req.body, titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
+        if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
             
             await novedadesModel.insertNovedades({
                 ...req.body,

@@ -13,7 +13,7 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
-var adminRouter = require('./routes/api');
+var adminRouter = require('.routes/admin/novedades');
 var apiRouter = require('./routes/api');
 
 var app = express();
@@ -55,7 +55,7 @@ app.use(fileUpload({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades', adminRouter);
+app.use('/admin/novedades', secured, adminRouter);
 app.use('/api', cors(), apiRouter);
 
 
