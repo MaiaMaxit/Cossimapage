@@ -1,5 +1,6 @@
-import '../../styles/components/layout/Nav.css';
 import { NavLink } from "react-router-dom";
+import React from 'react';
+import '../../styles/Nav.css'
 const Nav = (props) => {
     return(
         <nav>
@@ -12,7 +13,7 @@ const Nav = (props) => {
                     </ul>
             </div>
         </nav>
-    )
+    );
 }
 
                 export default Nav; 
