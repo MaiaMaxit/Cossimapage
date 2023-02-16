@@ -17,7 +17,7 @@ import Servicios from './pages/Servicios';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header></Header>
 
       <BrowserRouter>
       <Nav/>
