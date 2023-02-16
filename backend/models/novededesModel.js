@@ -2,7 +2,7 @@ var pool = require('./bd');
 
 async function getNovedades() {
         var query = "select * form novedades";
-        var rows = await pool.query(query);
+        var rows = pool.query(query);
         return rows;
 }
 
