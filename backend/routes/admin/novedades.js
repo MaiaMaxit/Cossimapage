@@ -1,9 +1,7 @@
 var express = require('express');
-const { route } = require('..');
 var router = express.Router();
 var novedadesModel = require('-/../../models/novededesModel');
 var util = require('util');
-const { isReadable } = require ('stream');
 var cloudinary = require('cloudinary').v2;
 const uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
@@ -34,6 +32,7 @@ router.get('/', async function (req, res, next) {
     res.render('admin/novedades', {
         layout: 'admin/layout',
         persona: req.session.nombre,
+        id: req.session.id_usuario,
         novedades
     });
 });
